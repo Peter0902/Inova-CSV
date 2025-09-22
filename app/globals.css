@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* LIGHT (colores del logo) */
+:root{
+  --brand-primary: 0 53 102;   /* #003566 */
+  --brand-secondary: 0 39 76;  /* #00274C */
+  --brand-accent: 209 24 26;   /* #D1181A */
+
+  --surface: 255 255 255;      /* blanco */
+  --surface-muted: 248 250 252;
+  --surface-inverse: 15 23 42;
+
+  --text: 15 23 42;
+  --text-muted: 71 85 105;
+  --text-inverse: 255 255 255;
+}
+
+/* DARK */
+:root[data-theme="dark"]{
+  --surface: 15 23 42;
+  --surface-muted: 30 41 59;
+  --surface-inverse: 248 250 252;
+
+  --text: 241 245 249;
+  --text-muted: 148 163 184;
+  --text-inverse: 15 23 42;
+}
+
+body{ @apply bg-surface text-textc antialiased; }
+:where(a,button,input,select,textarea):focus-visible{ outline:2px solid rgb(var(--brand-accent)); outline-offset:2px; }
+.container{ @apply mx-auto px-4 sm:px-6 lg:px-8; max-width:1200px; }
