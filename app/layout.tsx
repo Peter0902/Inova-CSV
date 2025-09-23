@@ -1,6 +1,6 @@
 import "./globals.css";
 import Link from "next/link";
-import ThemeToggle from "../components/ThemeToggle";
+import ThemeToggle from "./components/ThemeToggle";
 
 export const metadata = {
   title: { default: "Inova CSV | Validación y CSV para farma", template: "%s | Inova CSV" },
