@@ -3,7 +3,10 @@
 export default function ThemeToggle() {
   function toggle() {
     const r = document.documentElement;
-    r.setAttribute("data-theme", r.getAttribute("data-theme") === "dark" ? "light" : "dark");
+    r.setAttribute(
+      "data-theme",
+      r.getAttribute("data-theme") === "dark" ? "light" : "dark"
+    );
   }
   return (
     <button
